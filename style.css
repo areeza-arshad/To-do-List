@@ -1,0 +1,131 @@
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+/* APP */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FF8FA3;
+}
+.to-do-app {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.heading-container {
+    width: 400px;
+    text-align: center;
+    padding: 1.1rem;
+    font-size: 1.3rem;
+    background-color: #FF4D6D;
+    color: #fff;
+    font-family: 'Karla', serif;
+}
+.text-container {
+    width: 400px;
+    position: relative;
+    padding: 2.5rem;
+    margin-top: 1.5rem;
+    background-color: #fff;
+}
+#add-button {
+    color: #FFA6C1;
+    background-color: #FF4D6D;
+    width: 150px;
+    position: absolute;
+    left: 30%;
+    right: 0;
+    bottom: -30px;
+    border: 0;
+    padding: 1rem 0.9rem;
+    border-radius: 1.2rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: 'Karla', serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+ul li {
+    color: #FFA6C1;
+    font-family: 'Karla',serif;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    position: relative;
+    user-select: none;
+    padding: 20px 30px;
+}
+.unchecked::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 45px;
+    left: 20px;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 15px;
+    left:-20px;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+ul li.checked {
+    text-decoration: line-through;
+    color: #555;
+}
+ul li.checked::before {
+    background-image: url(checked.png);
+}
+#addContent {
+    background: none;
+    border: 0;
+    outline: 0;
+}
+input {
+    flex: 1;
+    padding: 10px;
+    outline: none;
+    background: transparent;
+    border: none; 
+    padding-left: 30px;
+    text-transform: capitalize;
+    font-family: 'Karla', serif;
+    font-size: 1rem;
+}
+ul li span {
+    color: #FFA6C1;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 50%;
+}
+ul li span:hover {
+    background: #FFCAD4;
+}
